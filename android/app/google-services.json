@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "663578199279",
+    "project_id": "modelthree-744d1",
+    "storage_bucket": "modelthree-744d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663578199279:android:3cd92bc42bb512d741071a",
+        "android_client_info": {
+          "package_name": "com.example.modelthree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663578199279-os5u5v6nv74732bm07e2dqpeiig028f7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.modelthree",
+            "certificate_hash": "587467b5db8f6c9d014579a68d42c0c1bdad4839"
+          }
+        },
+        {
+          "client_id": "663578199279-9ou56pr7ieaqk3dtbf6sle1a62oi1mi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwNwnppMjEo3kgkDQlLrKZroNo5me6bes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663578199279-9ou56pr7ieaqk3dtbf6sle1a62oi1mi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
