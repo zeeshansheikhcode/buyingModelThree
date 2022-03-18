@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:modelthree/screens/detail_chat.dart';
 import 'package:provider/provider.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-
+//import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import '../features/chatsearch.dart';
 import '../features/video_conference.dart';
 import '../model_provider/auth.dart';
@@ -22,7 +22,7 @@ class _DetailScreenState extends State<DetailScreen> {
   
   @override
   Widget build(BuildContext context) {
-    final authprovider =  Provider.of<Auth>(context,listen: false);
+   // final authprovider =  Provider.of<Auth>(context,listen: false);
     final productId = ModalRoute.of(context)!.settings.arguments as String;
     final loadedproduct = Provider.of<Products>(context,listen :false).findbyId(productId);
 
@@ -163,34 +163,34 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
             ), 
-            //  Card(  
-            //   margin:  EdgeInsets.symmetric(
-            //     vertical: constraint.maxHeight*0.005,
-            //     horizontal: constraint.maxWidth*0.02,
-            //   ),    
-            //   color: Colors.white,
-            //   elevation: 4,
-            //   child: InkWell(
-            //     child: Container(
-            //       margin:  EdgeInsets.symmetric(
-            //     vertical: constraint.maxHeight*0.01,
-            //     horizontal: constraint.maxHeight*0.01,
-            //     ),
-            //       padding: const EdgeInsets.symmetric(horizontal:5,vertical: 5),
-            //       height: constraint.maxHeight * 0.05,
-            //       width: double.infinity,
-            //       decoration:const BoxDecoration(
-            //         color: Colors.white,
-            //       ),
-            //       child: Text('Uploaded By:'+authprovider.Email!,
-            //       style: const TextStyle(
-            //       fontSize: 18,
-            //       color: Colors.black,
-            //       fontWeight: FontWeight.bold),
-            //       ),
-            //     ),
-            //   ),
-            // ),   
+             Card(  
+              margin:  EdgeInsets.symmetric(
+                vertical: constraint.maxHeight*0.005,
+                horizontal: constraint.maxWidth*0.02,
+              ),    
+              color: Colors.white,
+              elevation: 4,
+              child: InkWell(
+                child: Container(
+                  margin:  EdgeInsets.symmetric(
+                vertical: constraint.maxHeight*0.01,
+                horizontal: constraint.maxHeight*0.01,
+                ),
+                  padding: const EdgeInsets.symmetric(horizontal:5,vertical: 5),
+                  height: constraint.maxHeight * 0.05,
+                  width: double.infinity,
+                  decoration:const BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: Text('Uploaded By:'+ loadedproduct.seller,
+                  style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),   
             SizedBox(height: constraint.maxHeight*0.01,),
              Card(  
              margin:  EdgeInsets.symmetric(
@@ -245,7 +245,7 @@ class _DetailScreenState extends State<DetailScreen> {
                          onTap: ()
                          {
                            Navigator.push(context, MaterialPageRoute(builder: 
-                           (context)=> const ChatSearch()));
+                           (context)=>  DetailChat(sellername: loadedproduct.seller,)));
                          },
                           child: Container(
                            //  margin: const EdgeInsets.symmetric( horizontal:10),
